@@ -1,0 +1,8 @@
+<h3><%= @photo.title %></h3>
+<p><%= @photo.body %></p>
+
+<%= image_tag(url_for(@photo.picture)) %>
+
+<%= link_to "Voltar", photos_url %>
+<%= link_to "Editar", edit_photo_url(@photo) %>
+<%= link_to "Deletar", photo_path(@photo), method: :delete, data: {confirm: "Certeza?"} %>

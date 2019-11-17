@@ -14,3 +14,12 @@
     </ul>
   </div>
 </nav>
+
+<h1>Nickaliv</h1>
+
+<%= link_to 'Novo post', new_photo_path %>
+
+<% @photos.each do |photo| %>
+  <h3><%= link_to photo.title, photo_path(photo) %></h3>
+  <p><%= photo.body %></p>
+<% end %>
