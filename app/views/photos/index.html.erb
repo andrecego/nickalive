@@ -1,25 +1,13 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand text-light">Nickalive</a>
-  <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div id="my-nav" class="collapse navbar-collapse">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Item 1 <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Item 2</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
 <h1>Nickaliv</h1>
 
 <%= link_to 'Novo post', new_photo_path %>
 
 <% @photos.each do |photo| %>
-  <h3><%= link_to photo.title, photo_path(photo) %></h3>
-  <p><%= photo.body %></p>
+  <div class="row p-2">
+    <%= image_tag(url_for(photo.picture), {class: "img-fluid col-2"}) %>
+    <div class="col-10">
+      <h3><%= link_to photo.title, photo_path(photo) %></h3>
+      <p><%= photo.body %></p>
+    </div>
+  </div>
 <% end %>
