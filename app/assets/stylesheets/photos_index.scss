@@ -1,11 +1,25 @@
+.diamond-grid a{
+  display: inline-block;
+}
+
 .image-container{
   position: relative;
   text-align: center;
+  width: 300px;
+  height: 300px;
+  transform: rotate(45deg);
+  overflow: hidden;
+  display: inline-block;
 }
 
 .image-container .thumb-image{
   opacity: 0.8;
   transition: 0.5s ease;
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  transform: rotate(-45deg) translateY(-25%);
+  
 }
 .image-container:hover .thumb-image{
   opacity: 1.0;
@@ -27,7 +41,8 @@
 
 .image-text{
   color: #fff;
-  font-size: 8vw;
+  font-size: 2rem;
+  transform: rotate(-45deg);
 }
 
 

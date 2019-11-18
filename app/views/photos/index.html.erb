@@ -2,12 +2,15 @@
 
 <%= link_to 'Novo post', new_photo_path %>
 
-
-<% @photos.each do |photo| %>
-  <div class="image-container">
-    <%= image_tag(url_for(photo.picture), {class: "thumb-image img-fluid"}) %>
-    <div class="image-center">
-      <div class="image-text"><%= photo.title %></div>
+<div class="diamond-grid">
+  <% @photos.each do |photo| %>
+    <%= link_to photo_path(photo) do %>
+    <div class="image-container">
+      <%= image_tag(url_for(photo.picture), {class: "thumb-image"}) %>
+      <div class="image-center">
+        <div class="image-text"><%= photo.title %></div>
+      </div>
     </div>
-  </div>
-<% end %>
+    <% end %>
+  <% end %>
+</div>
