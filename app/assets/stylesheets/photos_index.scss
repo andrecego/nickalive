@@ -1,35 +1,104 @@
-.diamond-grid a{
-  width: 250px;
-  height: 250px;
-  transform: rotate(45deg);
-  overflow: hidden;
-  display: inline-block;
-  margin-right: 100px;
-  border: 2px solid #fff;
-  // position: relative;
-  text-align: center;
+@media (min-width: 1200px){
+  .diamond-grid .image-box{
+    transform: rotate(45deg);
+    width: 250px;
+    height: 250px;
+    &:hover{
+      transform: scale(1.1) rotate(45deg);
+      z-index: 100;
+    }
+  }
+
+  .image-box .thumb-image{
+    transform: rotate(-45deg) translateY(-73px);
+    width: 141.5%;
+    height: 141.5%;
+  }  
+  
+  .diamond-grid > div:nth-child(5n+4) {
+    margin-left: 177px;
+  }
+  .diamond-grid > div:nth-child(n) {
+    margin-top: -79px;
+  }
 }
 
-.image-box{
+@media (min-width: 992px) and (max-width: 1199px){
+  .diamond-grid .image-box{
+    transform: rotate(45deg);
+    width: 250px;
+    height: 250px;
+    &:hover{
+      transform: scale(1.1) rotate(45deg);
+      z-index: 100;
+    }
+  }
 
-  // width: 250px;
-  // height: 250px;
-  // transform: rotate(45deg);
-  // overflow: hidden;
-  // display: inline-block;
-  // margin-right: 100px;
-  // border: 2px solid #000;
+  .image-box .thumb-image{
+    transform: rotate(-45deg) translateY(-73px);
+    width: 141.5%;
+    height: 141.5%;
+  }  
+  .diamond-grid > div:nth-child(4n+3) {
+    margin-left: 177px;
+  }
+  .diamond-grid > div:nth-child(n+3) {
+    margin-top: -80px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  .diamond-grid .image-box{
+    transform: rotate(45deg);
+    width: 250px;
+    height: 250px;
+    &:hover{
+      transform: scale(1.1) rotate(45deg);
+      z-index: 100;
+    }
+  }
+
+  .image-box .thumb-image{
+    transform: rotate(-45deg) translateY(-73px);
+    width: 141.5%;
+    height: 141.5%;
+  }  
+  .diamond-grid > div:nth-child(2n+2) {
+    margin-left: 177px;
+  }
+  .diamond-grid > div:nth-child(n+2) {
+    margin-top: -80px;
+  }
+}
+
+@media (max-width: 767px){
+  .diamond-grid .image-box{
+    width: 250px;
+    height: 250px;
+  }
+
+  .image-box .thumb-image{
+    width: 100%;
+    height: 100%;
+  }  
+}
+
+.diamond-grid .image-box{
+  overflow: hidden;
+  display: inline-block;
+  border: 1px solid #fff;
+  margin-right: 100px;
+  position: relative;
+  text-align: center;
 }
 
 .image-box .thumb-image{
   opacity: 0.8;
-  transition: 0.5s ease;
-  width: 354px;
-  height: 354px;
+  transition: 0.5s ease-out;
   object-fit: cover;
-  transform: rotate(-45deg) translateY(-75px);
   display: table-cell;
 }
+
 .image-box:hover .thumb-image{
   opacity: 1.0;
 }
@@ -54,11 +123,21 @@
   transform: rotate(-45deg);
 }
 
+body{
+  background-color: #000;
+}
 
-.diamond-grid > a:nth-child(5n+4) {
-  margin-left: 177px;
+.diamond-grid {
+  margin-top: 160px;
 }
-.diamond-grid > a:nth-child(n+4) {
-  margin-top: -80px;
+
+h1.text-light{
+  text-align: center;
+  margin-left: -160px;
 }
+
+// TODO
+// Refatorar o CSS por @media
+// add modal window gallery
+
 

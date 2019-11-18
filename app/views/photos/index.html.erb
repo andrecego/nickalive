@@ -1,16 +1,22 @@
-<h1>Nickaliv</h1>
-
-<%= link_to 'Novo post', new_photo_path %>
+<h1 class="text-light">Galeria</h1>
 
 <div class="diamond-grid">
   <% @photos.each_with_index do |photo, index| %>
-    <%= link_to photo_path(photo) do %>
+    <!-- <%= link_to photo_path(photo) do %> -->
     <div class="image-box">
       <%= image_tag(url_for(photo.picture), {class: "thumb-image"}) %>
       <div class="image-center">
         <div class="image-text"><%= photo.title %></div>
       </div>
     </div>
-    <% end %>
+    <!-- <% end %> -->
   <% end %>
 </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
