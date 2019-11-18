@@ -2,12 +2,12 @@
 
 <%= link_to 'Novo post', new_photo_path %>
 
+
 <% @photos.each do |photo| %>
-  <div class="row p-2">
-    <%= image_tag(url_for(photo.picture), {class: "img-fluid col-2"}) %>
-    <div class="col-10">
-      <h3><%= link_to photo.title, photo_path(photo) %></h3>
-      <p><%= photo.body %></p>
+  <div class="image-container">
+    <%= image_tag(url_for(photo.picture), {class: "thumb-image img-fluid"}) %>
+    <div class="image-center">
+      <div class="image-text"><%= photo.title %></div>
     </div>
   </div>
 <% end %>
