@@ -5,10 +5,12 @@
     <!-- <%= link_to photo_path(photo) do %> -->
     <div class="image-box">
       <%= image_tag(url_for(photo.picture), {class: "thumb-image"}) %>
+      <!-- <%= link_to image_tag(url_for(photo.picture)), photo_path(photo), class: "thumb-image" %> -->
       <div class="image-center">
-        <div class="image-text"><%= photo.title %></div>
+        <div class="image-text" ><%= photo.title %></div>
       </div>
     </div>
+    
     <!-- <% end %> -->
   <% end %>
 </div>
