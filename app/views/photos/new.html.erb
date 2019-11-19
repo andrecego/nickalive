@@ -1,4 +1,7 @@
-<h3>Envie uma nova foto</h3>
-<%= form_for @photo do |f| %>
-  <%= render 'photos/form', f: f %>
-<% end %>
+<h3 class="text-light p-2">Envie uma nova foto</h3>
+
+<div class="col-6">
+  <%= form_for @photo do |f| %>
+    <%= render 'photos/form', f: f %>
+  <% end %>
+</div>
