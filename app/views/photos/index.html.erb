@@ -2,7 +2,7 @@
 
 <div class="diamond-grid">
   <% @photos.each_with_index do |photo, index| %>
-    <!-- <%= link_to photo_path(photo) do %> -->
+    <%= link_to photo_path(photo) do %>
     <div class="image-box">
       <%= image_tag(url_for(photo.picture), {class: "thumb-image"}) %>
       <!-- <%= link_to image_tag(url_for(photo.picture)), photo_path(photo), class: "thumb-image" %> -->
@@ -11,7 +11,7 @@
       </div>
     </div>
     
-    <!-- <% end %> -->
+    <% end %>
   <% end %>
 </div>
 

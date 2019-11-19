@@ -38,28 +38,28 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px){
-  .diamond-grid > div:nth-child(2n+2) {
+  .diamond-grid a:nth-child(2n+2) .image-box {
     margin-left: 177px;
   }
-  .diamond-grid > div:nth-child(n+2) {
+  .diamond-grid a:nth-child(n+2) .image-box {
     margin-top: -80px;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px){
-  .diamond-grid > div:nth-child(4n+3) {
+  .diamond-grid a:nth-child(4n+3) .image-box {
     margin-left: 177px;
   }
-  .diamond-grid > div:nth-child(n+3) {
+  .diamond-grid a:nth-child(n+3) .image-box {
     margin-top: -80px;
   }
 }
 
 @media (min-width: 1200px){
-  .diamond-grid > div:nth-child(5n+4) {
+  .diamond-grid > a:nth-child(5n+4) .image-box {
     margin-left: 177px;
   }
-  .diamond-grid > div:nth-child(n) {
+  .diamond-grid > a:nth-child(n) .image-box{
     margin-top: -80px;
   }
 }
