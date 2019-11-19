@@ -2,10 +2,9 @@
 
 <div class="diamond-grid">
   <% @photos.each_with_index do |photo, index| %>
-    <%= link_to photo_path(photo) do %>
-    <div class="image-box">
+    <%= link_to url_for(photo.picture), {'data-lightbox': "grafitti" } do %>
+    <div class="image-box" >
       <%= image_tag(url_for(photo.picture), {class: "thumb-image"}) %>
-      <!-- <%= link_to image_tag(url_for(photo.picture)), photo_path(photo), class: "thumb-image" %> -->
       <div class="image-center">
         <div class="image-text" ><%= photo.title %></div>
       </div>
@@ -22,3 +21,10 @@
 <br>
 <br>
 <br>
+<script>
+  lightbox.option({
+    'albumLabel': '2019',
+    'imageFadeDuration' : 300,
+    'fadeDuration' : 300
+  })
+</script>
