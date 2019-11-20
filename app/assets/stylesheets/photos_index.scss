@@ -1,4 +1,4 @@
-@media (max-width: 767px){
+@media (max-width: 871px){
   .diamond-grid .image-box{
     width: 100%;
     height: auto;
@@ -14,7 +14,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 872px) {
   .diamond-grid .image-box{
     transform: rotate(45deg);
     width: 250px;
@@ -42,16 +42,20 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px){
+@media (min-width: 872px) and (max-width: 991px){
 
   .diamond-grid {
     margin-left: 15%;
   }
 
-  .diamond-grid a:nth-child(2n+2) .image-box {
+  body .container{
+    max-width: 100%;
+  }
+
+  .diamond-grid a:nth-child(3n+3) .image-box {
     margin-left: 177px;
   }
-  .diamond-grid a:nth-child(n+2) .image-box {
+  .diamond-grid a:nth-child(n+3) .image-box {
     margin-top: -60px;
   }
 }

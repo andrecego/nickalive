@@ -28,3 +28,6 @@
 
 # Ignore environment variables
 /config/local_env.yml
+
+#ignore TODO
+/TODO.txt
