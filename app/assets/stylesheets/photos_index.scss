@@ -19,6 +19,7 @@
     transform: rotate(45deg);
     width: 250px;
     height: 250px;
+    transition: 0.3s ease-out;
     &:hover{
       transform: scale(1.1) rotate(45deg);
       z-index: 100;
@@ -51,7 +52,7 @@
     margin-left: 177px;
   }
   .diamond-grid a:nth-child(n+2) .image-box {
-    margin-top: -80px;
+    margin-top: -60px;
   }
 }
 
@@ -60,7 +61,7 @@
     margin-left: 177px;
   }
   .diamond-grid a:nth-child(n+3) .image-box {
-    margin-top: -80px;
+    margin-top: -60px;
   }
 }
 
@@ -69,7 +70,7 @@
     margin-left: 177px;
   }
   .diamond-grid > a:nth-child(n) .image-box{
-    margin-top: -80px;
+    margin-top: -60px;
   }
 }
 
@@ -80,7 +81,7 @@
 .diamond-grid .image-box{
   overflow: hidden;
   display: inline-block;
-  border: 1px solid #fff;
+  border: 5px solid #000;
   margin-right: 100px;
   position: relative;
   text-align: center;
@@ -88,13 +89,13 @@
 
 .image-box .thumb-image{
   opacity: 0.8;
-  transition: 0.3s ease-out;
   object-fit: cover;
   display: table-cell;
 }
 
 .image-box:hover .thumb-image{
   opacity: 1.0;
+  border: 0;
 }
 
 .image-center{
