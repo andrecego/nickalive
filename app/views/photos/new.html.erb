@@ -2,6 +2,15 @@
 
 <div class="col-6">
   <%= form_for @photo do |f| %>
+
+    <% if @photo.errors.any? %>
+      <ul>
+        <% @photo.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    <% end %>
+
     <%= render 'photos/form', f: f %>
   <% end %>
 </div>

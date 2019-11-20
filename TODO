@@ -1,2 +1,7 @@
 caption on lightbox gallery
-margin and rotate-font on @media < 720px
+transition on hover
+
+
+https://github.com/yfxie/activestorage-imgur/
+this gem has built-in validation to validate image file. attachment can be nil, if it presents, it only accept image type. 
+if your app only accept files with image types, it should be fine.

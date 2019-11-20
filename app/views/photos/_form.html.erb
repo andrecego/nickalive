@@ -1,19 +1,16 @@
-<form>
-  <div class="form-group">
-    <%= f.label :title, "Título", class: 'text-light' %>
-    <%= f.text_field :title, class: "form-control" %>
-  </div>
+<div class="form-group">
+  <%= f.label :title, "Título", class: 'text-light' %>
+  <%= f.text_field :title, class: "form-control" %>
+</div>
 
-  <div class="form-group">
-    <%= f.label :body, "Comentários", class: 'text-light' %>
-    <%= f.text_area :body, class: "form-control" %>
-  </div>
+<div class="form-group">
+  <%= f.label :body, "Comentários", class: 'text-light' %>
+  <%= f.text_area :body, class: "form-control" %>
+</div>
 
-  <div class="form-group">
-    <%= f.label :picture, "Foto", class: 'text-light' %>
-    <%= f.file_field :picture, class: "text-light form-control-file" %>
-  </div>
+<div class="form-group">
+  <%= f.label :picture, "Foto", class: 'text-light' %>
+  <%= f.file_field :picture, class: "text-light form-control-file" %>
+</div>
 
-  <%= f.submit "Enviar", class: "btn btn-primary" %>
-
-</form>
+<%= f.submit "Enviar", class: "btn btn-primary" %>
