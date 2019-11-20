@@ -10,7 +10,7 @@
 
 <div class="form-group">
   <%= f.label :picture, "Foto", class: 'text-light' %>
-  <%= f.file_field :picture, class: "text-light form-control-file" %>
+  <%= f.file_field :picture, class: "text-light form-control-file", accept: 'image/png,image/gif,image/jpeg' %>
 </div>
 
 <%= f.submit "Enviar", class: "btn btn-primary" %>

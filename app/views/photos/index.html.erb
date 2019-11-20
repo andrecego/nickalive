@@ -2,11 +2,11 @@
 
 <div class="diamond-grid">
   <% @photos.each_with_index do |photo, index| %>
-    <%= link_to url_for(photo.picture), {'data-lightbox': "grafitti" } do %>
+    <%= link_to photo.picture, {'data-lightbox': "grafitti", 'data-title': photo.title } do %>
     <div class="image-box" >
-      <%= image_tag(url_for(photo.picture), {class: "thumb-image"}) %>
+      <%= image_tag(photo.picture, {class: "thumb-image"}) %>
       <div class="image-center">
-        <div class="image-text" ><%= photo.title %></div>
+        <!-- <div class="image-text" ><%= photo.title %></div> -->
       </div>
     </div>
     
