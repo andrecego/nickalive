@@ -1,6 +1,6 @@
 class PhotosController < ApplicationController
   def index
-    @photos = Photo.all
+    @pagy, @photos = pagy(Photo.all, items: 5)
   end
 
   def new
@@ -61,6 +61,11 @@ class PhotosController < ApplicationController
       redirect_to photos_url
     end
   end
+
+  def incremental
+    @pagy, @photos = pagy_countless(Photo.all, items: 5, link_extra: 'data-remote="true"')
+  end
+  
   
 
   private
