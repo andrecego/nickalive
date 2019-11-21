@@ -48,6 +48,21 @@ class PhotosController < ApplicationController
     end
   end
 
+  def admin_index
+    @photos = Photo.all
+  end
+
+  def destroy_multiple
+    if Photo.destroy(params[:photos]) #aqui nao deveria ser photos_id? o param chega só com photos
+      flash[:success] = "Foto apagada com sucesso"
+      redirect_to photos_url
+    else
+      flash[:error] = "Algo deu errado"
+      redirect_to photos_url
+    end
+  end
+  
+
   private
   def photo_params
     params.require(:photo).permit(:title, :body, :picture)
