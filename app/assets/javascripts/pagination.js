@@ -1,13 +1,13 @@
 // slide up animation
-let n = 0
+let nIndex = 0
 $(document).ready(function() { 
   animate();
 });
 function animate() {  
   for (let i = 0; i < 8; i++){
-    document.getElementsByClassName("image-box")[n+i].style.marginTop = "-60px";
+    document.getElementsByClassName("image-box")[nIndex+i].style.marginTop = "-60px";
   }
-  n += 8;
+  nIndex += 8;
 };
 
 // infinite scroll stuff
