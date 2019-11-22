@@ -1,20 +1,20 @@
 // slide up animation
-let nIndex = 0
+var n = 0
 $(document).ready(function() { 
   animate();
 });
 function animate() {  
-  for (let i = 0; i < 8; i++){
-    document.getElementsByClassName("image-box")[nIndex+i].style.marginTop = "-60px";
+  for (var i = 0; i < 8; i++){
+    document.getElementsByClassName("image-box")[n+i].style.marginTop = "-60px";
   }
-  nIndex += 8;
+  n += 8;
 };
 
 // infinite scroll stuff
-let loadNextPage = function(){
+var loadNextPage = function(){
   if ($('#next_link').data("loading")){ return }  // prevent multiple loading
-  let wBottom  = $(window).scrollTop() + $(window).height();
-  let elBottom = $('#diamond-grid').offset().top + $('#diamond-grid').height();
+  var wBottom  = $(window).scrollTop() + $(window).height();
+  var elBottom = $('#diamond-grid').offset().top + $('#diamond-grid').height();
   if (wBottom > elBottom){
     $('#next_link')[0].click();
     setTimeout(animate, 250);
