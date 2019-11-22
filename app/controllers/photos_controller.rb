@@ -1,7 +1,7 @@
 class PhotosController < ApplicationController
   def index
     # @pagy, @photos = pagy(Photo.all, items: 5)
-    @pagy, @photos = pagy_countless(Photo.all, items: 8, link_extra: 'data-remote="true"')
+    @pagy, @photos = pagy_countless(Photo.all, items: 1, link_extra: 'data-remote="true"')
   end
 
   def new
