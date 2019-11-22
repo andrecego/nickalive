@@ -2,6 +2,8 @@
   .diamond-grid .image-box{
     width: 100%;
     height: auto;
+    transform: rotate(0deg) !important;
+    opacity: 0.2;
   }
 
   .image-box .thumb-image{
@@ -20,9 +22,11 @@
     width: 250px;
     height: 250px;
     transition: 0.3s ease-out;
+    opacity: 0;
     &:hover{
       transform: scale(1.1) rotate(45deg);
       z-index: 100;
+      opacity: 1 !important;
     }
   }
 
@@ -55,8 +59,8 @@
   .diamond-grid a:nth-child(3n+3) .image-box {
     margin-left: 177px;
   }
-  .diamond-grid a:nth-child(n+3) .image-box {
-    // margin-top: -60px;
+  .diamond-grid a:nth-child(n+2) .image-box {
+    margin-top: -60px;
   }
 }
 
@@ -64,8 +68,8 @@
   .diamond-grid a:nth-child(4n+3) .image-box {
     margin-left: 177px;
   }
-  .diamond-grid a:nth-child(n+3) .image-box {
-    // margin-top: -60px;
+  .diamond-grid a:nth-child(n+2) .image-box {
+    margin-top: -60px;
   }
 }
 
@@ -73,8 +77,8 @@
   .diamond-grid > a:nth-child(5n+4) .image-box {
     margin-left: 177px;
   }
-  .diamond-grid > a:nth-child(n) .image-box{
-    // margin-top: -60px;
+  .diamond-grid > a:nth-child(n+3) .image-box{
+    margin-top: -60px;
   }
 }
 
@@ -92,7 +96,6 @@
 }
 
 .image-box .thumb-image{
-  opacity: 0.6;
   object-fit: cover;
   display: table-cell;
 }
@@ -102,24 +105,6 @@
   border: 0;
 }
 
-.image-center{
-  position: absolute;
-  margin: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: 0.3s ease-out;
-}
-
-.image-box:hover .image-center{
-  opacity: 1.0;
-}
-
-.image-text{
-  color: #fff;
-  font-size: 2rem;
-}
 
 body{
   background-color: #000;
