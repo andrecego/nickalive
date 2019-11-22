@@ -1,6 +1,6 @@
 // slide up animation
 // 'n' and 'i' depend on the number of items "per page" on the controller
-let n = 0
+var n = 0
 function imageMoveUp() {  
   // if ($('.image-box').eq([n+i]) == undefined) {return} // prevent errors in console
   console.log(n);
@@ -10,10 +10,10 @@ function imageMoveUp() {
 };
 
 // infinite scroll stuff
-let loadNextPage = setInterval(function() {
+var loadNextPage = setInterval(function() {
   if ($('#next_link').data('loading')){ return }  // prevent multiple loading
-  let wBottom  = $(window).scrollTop() + $(window).height() + 170;
-  let elBottom = $('#diamond-grid').offset().top + $('#diamond-grid').height();
+  var wBottom  = $(window).scrollTop() + $(window).height() + 170;
+  var elBottom = $('#diamond-grid').offset().top + $('#diamond-grid').height();
     // console.log(wBottom, elBottom)
     if (wBottom > elBottom){
       // console.log('rodando dentro')
