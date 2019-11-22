@@ -1,12 +1,12 @@
 @media (max-width: 871px){
-  .diamond-grid .image-box{
+  .image-box{
     width: 100%;
     height: auto;
     transform: rotate(0deg) !important;
     opacity: 0.2;
   }
 
-  .image-box .thumb-image{
+  .thumb-image{
     width: 100%;
     height: 100%;
   }
@@ -17,7 +17,7 @@
 }
 
 @media (min-width: 872px) {
-  .diamond-grid .image-box{
+  .image-box{
     transform: rotate(45deg);
     width: 250px;
     height: 250px;
@@ -30,7 +30,7 @@
     }
   }
 
-  .image-box .thumb-image{
+  .thumb-image{
     transform: rotate(-45deg) translateY(-73px);
     width: 141.5%;
     height: 141.5%;
@@ -39,10 +39,6 @@
   .diamond-grid{
     margin-top: 160px;
     margin-left: 48px;
-  }
-
-  .image-text{
-    transform: rotate(-45deg);
   }
 }
 
@@ -56,37 +52,37 @@
     max-width: 100%;
   }
 
-  .diamond-grid a:nth-child(3n+3) .image-box {
+  .image-box:nth-child(3n+3)  {
     margin-left: 177px;
   }
-  .diamond-grid a:nth-child(n+2) .image-box {
+  .image-box:nth-child(n+2)  {
     margin-top: -60px;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px){
-  .diamond-grid a:nth-child(4n+3) .image-box {
+  .image-box:nth-child(4n+3) {
     margin-left: 177px;
   }
-  .diamond-grid a:nth-child(n+2) .image-box {
+  .image-box:nth-child(n+2) {
     margin-top: -60px;
   }
 }
 
 @media (min-width: 1200px){
-  .diamond-grid > a:nth-child(5n+4) .image-box {
+  .image-box:nth-child(5n+4) {
     margin-left: 177px;
   }
-  .diamond-grid > a:nth-child(n+3) .image-box{
+  .image-box:nth-child(n+3) {
     margin-top: -60px;
   }
 }
 
-.diamond-grid a { 
+.image-box { 
   text-decoration: none;
 }
 
-.diamond-grid .image-box{
+.image-box{
   overflow: hidden;
   display: inline-block;
   border: 5px solid #000;
@@ -95,7 +91,7 @@
   text-align: center;
 }
 
-.image-box .thumb-image{
+.thumb-image{
   object-fit: cover;
   display: table-cell;
 }
@@ -105,12 +101,9 @@
   border: 0;
 }
 
-
 body{
   background-color: #000;
 }
-
-
 
 h1.text-light{
   text-align: center;

@@ -1,10 +1,5 @@
 <% @photos.each_with_index do |photo, index| %>
-  <%= link_to photo.picture, {'data-lightbox': "grafitti", 'data-title': photo.title } do %>
-    <div class="image-box" >
+  <%= link_to photo.picture, {'data-lightbox': "grafitti", 'data-title': photo.title, class: "image-box" } do %>
       <%= image_tag(photo.picture, {class: "thumb-image"}) %>
-      <div class="image-center">
-      <!-- <div class="image-text" ><%= photo.title %></div> -->
-      </div>
-    </div>
   <% end %>
 <% end %>
