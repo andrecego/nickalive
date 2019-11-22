@@ -63,10 +63,8 @@ class PhotosController < ApplicationController
   end
 
   def incremental
-    @pagy, @photos = pagy_countless(Photo.all, items: 5, link_extra: 'data-remote="true"')
+    @pagy, @photos = pagy_countless(Photo.all, items: 8, link_extra: 'data-remote="true"')
   end
-  
-  
 
   private
   def photo_params
