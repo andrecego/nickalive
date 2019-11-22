@@ -17,6 +17,7 @@ gem 'jquery-rails'
 gem 'lightbox2-rails'
 gem 'activestorage-imgur'
 gem 'pagy', '~> 3.5'
+gem "font-awesome-rails"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
