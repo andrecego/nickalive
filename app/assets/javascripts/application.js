@@ -19,4 +19,3 @@
 // = require bootstrap-sprockets
 // = require lightbox
 // = require pagination
-
