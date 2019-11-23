@@ -9,10 +9,10 @@ class PhotosController < ApplicationController
   end
 
   def create
-    @photo = Photo.new(photo_params)
-    if @photo.save
-      flash[:success] = "Foto postada com sucesso"
-      redirect_to @photo
+    @photo = CreatePhotos.new(photo_params)    
+    if @photo.save_photos
+      flash[:success] = "Foto(s) postada(s) com sucesso"
+      redirect_to admin_index_photos_path
     else
       flash[:error] = "Algo deu errado"
       render :new
@@ -50,6 +50,7 @@ class PhotosController < ApplicationController
   end
 
   def admin_index
+    @photo = Photo.new
     @photos = Photo.all
   end
 
@@ -65,6 +66,6 @@ class PhotosController < ApplicationController
 
   private
   def photo_params
-    params.require(:photo).permit(:title, :body, :picture)
+    params.require(:photo).permit(:title, :body, picture: [])
   end
 end

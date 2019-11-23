@@ -1,7 +1,19 @@
-<h1>Deletar fotos</h1>
+<h1>Adicionar multiplas fotos</h1>
 <hr style="border-top: 1px solid #ccc">
 
+<%= form_for @photo do |f| %>
+  <div class="form-group">
+    <%= f.label :picture, "Foto", class: 'text-light' %>
+    <%= f.file_field :picture, class: "text-light form-control-file", accept: 'image/png,image/gif,image/jpeg', multiple: true %>
+  </div>
+  <%= f.submit "Enviar", class: "btn btn-primary" %>
+<% end %>
+
+<h1>Deletar fotos</h1>
+<hr style="border-top: 1px solid #ccc">
+<br>
 <%= form_tag destroy_multiple_photos_path, method: :delete do %>
+<%= submit_tag "Deletar selecionados", class: "btn btn-danger float-right", data:{confirm: "Tem certeza?"} %>
   <% @photos.each do |photo| %>
 
     <div class="col-3" style="display: inline-block;">
@@ -17,6 +29,4 @@
     </div>
 
   <% end %>
-    <br>
-  <%= submit_tag "Deletar selecionados", class: "btn btn-danger", style:"float-right", data:{confirm: "Tem certeza?"} %>
 <% end %>
