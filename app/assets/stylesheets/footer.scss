@@ -1,4 +1,33 @@
 .footer{
+	@media (max-width: 992px){
+		h4 {
+			border-bottom: 1px solid #ccc;
+			font-size: 30px;
+		}
+		p {
+			font-size: 18px;
+		}
+		li{
+			font-size: 50px;
+			display: inline-block;
+			margin-right: 30px;
+		}
+	}
+	@media (min-width: 993px){
+		h4 {
+			border-bottom: 1px solid #ccc;
+			font-size: 25px;
+		}
+		p {
+			font-size: 14px;
+		}
+		li{
+			font-size: 18px;
+		}
+		.links {
+			text-align: center;
+		}
+	}
   background: #333;
   color:white;
   
@@ -12,9 +41,6 @@
         color:#ccc;
         }
     }
-    h2{
-      border-bottom: 1px solid rgba(255,255,255,.1);
-    }
   }  
   .about-company{
     i{font-size: 25px;}
@@ -23,18 +49,19 @@
       transition: color .2s;
       &:hover{color:#4180CB}
     }
-    h2{
-      border-bottom: 1px solid rgba(255,255,255,.1);
-    }
   } 
   .location{
-    h4{
-      border-bottom: 1px solid rgba(255,255,255,.1);
-    }
     i{
       font-size: 18px;
       color: white;
-    }
+		}
+		a {
+			color: white;
+			&:hover{
+				color: #00E676;
+				text-decoration: none;
+			}
+		}
     .social-media{
       i{
         font-size: 50px;
@@ -43,4 +70,17 @@
     }
   }
   .copyright p{border-top:1px solid rgba(255,255,255,.1);} 
+}
+
+#footer {
+	padding: 25px 0;
+	padding-top: 65px;
+  font-size: 85%;
+  min-height: 20vw;
+	background-color: #212121;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
 }
