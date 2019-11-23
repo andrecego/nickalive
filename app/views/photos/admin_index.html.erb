@@ -11,22 +11,21 @@
 
 <h1>Deletar fotos</h1>
 <hr style="border-top: 1px solid #ccc">
-<br>
+
 <%= form_tag destroy_multiple_photos_path, method: :delete do %>
-<%= submit_tag "Deletar selecionados", class: "btn btn-danger float-right", data:{confirm: "Tem certeza?"} %>
+  <%= submit_tag "Deletar selecionados", class: "btn btn-danger float-right", data:{confirm: "Tem certeza?"} %>
+<br>
+<br>
+<br>
   <% @photos.each do |photo| %>
-
-    <div class="col-3" style="display: inline-block;">
-      <div class="card text-white bg-dark m-3">
+      <div class="card text-white bg-dark admin-card">
         <%= label_tag do %>
-          <%= image_tag(photo.picture, {class: "card-img-top"}) %>
-          <%= check_box_tag "photos[]", photo.id, false, style: "width: 20px; height: 20px;position:absolute; left:15px; top: 10px" %>
-          <div class="card-body">
-              <p class="card-text"><%= photo.title %></p>
-          </div>
+          <%= image_tag(photo.picture, {class: "card-img-top admin-image"}) %>
+          <%= check_box_tag "photos[]", photo.id, false, class: "admin-checkbox" %>
         <% end %>
+        <div class="card-body admin-card-body">
+            <p class="card-text"> <%= photo.title %></p>
+        </div>
       </div>
-    </div>
-
   <% end %>
 <% end %>
